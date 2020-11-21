@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: sans-serif;
+	background: linear-gradient(0deg, #93a5cf, #e4efe9);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chatbox {
+  width: 400px;
+  height: 600px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #7e99c7, #537895);
+  border: 2px solid #000;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.input-message form {
+  display: flex;
+}
+
+.input-message input {
+  color: #fff;
+  background: #222;
+  outline: 0;
+  border: 2px solid #000;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  flex-grow: 1;
+  border-radius: 50px;
+}
+
+.input-message input:focus {
+  background: linear-gradient(#111, #333);
+}
+
+.input-message button {
+  font-weight: bolder;
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 12px 14px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.input-message button:hover {
+  background: #222;
+}
+
+.header {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 20px;
+  border-bottom: 2px solid #000;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.header h1 {
+  font-weight: lighter;
+  font-size: 25px;
+  align-self: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+
+.header button {
+  border-radius: 50px;
+  color: #fff;
+  background: #111;
+  outline: 0;
+  padding: 8px 16px;
+  font-size: 18px;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header button:hover {
+  background: #222;
+}
+
+.message-box {
+	justify-content: flex-end;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-top: 10px;
+	word-break: break-all;
+}
+
+.sent-message {
+  max-width: 250px;
+  display: flex;
+  align-self: flex-end;
+  color: #000;
+	font-weight: 600;
+  padding: 10px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #111;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.received-message {
+  max-width: 250px;
+	font-weight: 600;
+  display: flex;
+  align-self: flex-start;
+  border-radius: 10px;
+  padding: 10px;
+  background: #111;
+  margin: 10px 0;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.login-signup {
+  margin: 200px auto;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #111;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #7e99c7, #537895);
+  box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 0.5);
+	color: #000;
+}
+
+.login-signup h1 {
+  font-weight: 100;
+  margin-top: -5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+
+.center {
+  text-align: center;
+}
+
+.note {
+  margin-top: 10px;
+  padding: 5px 1px;
+  border: 1px solid #fff;
+}
+
+.login-signup label {
+  margin: 20px 0 0 0;
+}
+
+.login-signup input {
+  margin: 7px 0 0 0;
+  outline: 0;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid #111;
+  background: #222;
+  color: #ddd;
+}
+
+.login-signup input:focus {
+  background: linear-gradient(#111, #333);
+}
+
+.but-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.but-holder button {
+  margin: 10px 0 0 0;
+  padding: 8px 12px;
+  font-size: 18px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  border: 2px solid #000;
+  background: transparent;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  color: #000;
+  cursor: pointer;
+}
+
+.but-holder button:hover, .but-holder button:focus {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.login-signup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-signup .link {
+  cursor: pointer;
+	color: #000;
+  text-decoration: none;
+}
+
+.login-signup .link:hover {
+  text-decoration: underline;
+}
+
+.friend-list {
+  overflow: auto;
+  padding: 0px 8px 0;
+}
+
+.friend-list p {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.friend-list li {
+  color: #000;
+  padding: 14px 20px;
+  list-style: none;
+  border-top: 0;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 2px solid #000;
+}
+
+.friend-list .link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.chat-head {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #000;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.chat-head > div {
+  padding: 9px 0;
+}
+
+.chat-head .icon-span {
+  padding: 12px 15px;
+}
+
+.chat-head .link {
+  transition: all 0.3s ease;
+  color: #000;
+  cursor: default;
+}
+
+.chat-head .name {
+  font-size: 20px;
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.chat-head .icon-span:not(.blank-span):hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.offline {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.online {
+  background: limegreen;
+}
+
+.icon-span i {
+  font-size: 20px;
+}
+
+.header i {
+  transform: rotate(270deg);
+}
+
+.blank-icon {
+  color: transparent;
+}
+
+.options {  
+  color: #000;
+}
+
+.options .first {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.options * {
+  margin: 10px 0;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.options .last {
+  padding: 0 50px;
+}
+
+.last div {
+  display: flex;
+}
+
+.last div * {
+  background: transparent;
+  border: 1px solid #000;
+  outline: 0;
+  color: #000;
+  padding: 7px 10px;
+}
+
+.last div input {
+  flex-grow: 2;
+}
+
+.last div button {
+  flex-grow: 1;
+}
+
+.last div button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
