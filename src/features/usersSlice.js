@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [
   {
-    userId: 1324140,
-    userName: `sakib75`,
-    fullName: `Samiur Rafi Sakib`,
-    password: `sakib5@rafi`
+    userId: 'fqfynmjPwSrhet3lwuh43',
+    userName: `louisHofmann`,
+    userFullName: `Louis Hofmann`,
+    password: `louis@Hofmann`,
+		userImage: `${require('../images/LouisHofmann.jpg')}`
   }
 ];
 
@@ -14,8 +15,8 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     userAdded: (state, action) => {
-      const { userId, userName, fullName, password } = action.payload;
-      return [...state, {userId, userName, fullName, password}];
+      const { userId, userName, userFullName, password, userImage } = action.payload;
+      return [...state, {userId, userName, userFullName, password, userImage}];
     }
   }
 });

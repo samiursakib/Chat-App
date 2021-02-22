@@ -19,7 +19,7 @@ export const ChatHead = ({match, url, ownBox, userName}) => {
             </span>
           </Link>
         </div>
-        <div className='name'>{friend.nickName ? friend.nickName : friend.friendName}</div>
+        <div className='name'>{friend.nickName ? friend.nickName : friend.friendFullName}</div>
         <div className=''>
           {!match.url.match(/options/g)
             ? <Link

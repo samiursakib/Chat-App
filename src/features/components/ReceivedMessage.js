@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const ReceivedMessage = ({message}) => {
+export const ReceivedMessage = ({message, time}) => {
   return (
-    <div className='received-message'>{message}</div>
+    <div className='received-message' title={time.toISOString()}>{message}</div>
   );
-}
+};

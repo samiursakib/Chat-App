@@ -21,29 +21,31 @@ export const LogIn = () => {
         history.push(`/user/${user.userId}`);
       }
     } else {
-      setNote(`Username & Password don't match`);
+      setNote(`Username or Password didn't match`);
     }
   };
   return (
-    <div className='login-signup'>
-      <form onSubmit={onSubmit}>
-        <h1 className='center'>Login Form</h1>
-        <label>User Name:</label>
-        <input
-          type='text'
-          value={userName}
-          onChange={e => setUserName(e.target.value)}
-        />
-        <label>Password:</label>        
-        <input
-          type='password'
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-        <div className='but-holder'><button>Login</button></div>
-      </form>
-      <Link to='/signup' className='link center'><p>Haven't any account yet?</p></Link>
-      {note && <p className='center note'>{note}</p>}
-    </div>
+		<div className='container'>
+			<div className='login-signup'>
+				<form onSubmit={onSubmit}>
+					<h1 className='center'>Login Form</h1>
+					<label>Username:</label>
+					<input
+						type='text'
+						value={userName}
+						onChange={e => setUserName(e.target.value)}
+					/>
+					<label>Password:</label>        
+					<input
+						type='password'
+						value={password}
+						onChange={e => setPassword(e.target.value)}
+					/>
+					<div className='but-holder'><button>Login</button></div>
+				</form>
+				<Link to='/signup' className='link center'><p>Haven't any account yet?</p></Link>
+				{note && <p className='center note'>{note}</p>}
+			</div>
+		</div>
   );
 };

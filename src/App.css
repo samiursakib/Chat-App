@@ -13,15 +13,17 @@ body {
 	background: linear-gradient(0deg, #93a5cf, #e4efe9);
 }
 .container {
+	height: 100vh;
   display: flex;
   flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .chatbox {
+	display: flex;
   width: 400px;
   height: 600px;
-  margin: 100px auto;
-  display: flex;
   flex-direction: column;
   background: linear-gradient(90deg, #7e99c7, #537895);
   border: 2px solid #000;
@@ -66,12 +68,22 @@ body {
 }
 
 .header {
+	width: 100%;
   color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 10px 10px 10px 20px;
   border-bottom: 2px solid #000;
   background: rgba(0, 0, 0, 0.4);
+	align-content: center;
+	align-items: center;
+}
+
+.header .thumbnail {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 50%;
 }
 
 .header h1 {
@@ -82,15 +94,15 @@ body {
 }
 
 .header button {
-  border-radius: 50px;
+  border-radius: 10px;
   color: #fff;
   background: #111;
-  outline: 0;
-  padding: 8px 16px;
-  font-size: 18px;
-  border: 2px solid #000;
+  padding: 4px 8px;
+  font-size: 16px;
+  border: 1px solid #000;
   cursor: pointer;
   transition: all 0.3s ease;
+	margin-right: 8px;
 }
 
 .header button:hover {
@@ -137,7 +149,7 @@ body {
 }
 
 .login-signup {
-  margin: 200px auto;
+	
   width: 300px;
   padding: 20px;
   border: 2px solid #111;
@@ -159,9 +171,12 @@ body {
 }
 
 .note {
+	font-size: 15px;
   margin-top: 10px;
-  padding: 5px 1px;
-  border: 1px solid #fff;
+  padding: 5px 0;
+	color: #b62525;
+	font-weight: bold;
+	text-decoration: underline #b62525;
 }
 
 .login-signup label {
@@ -193,7 +208,6 @@ body {
   padding: 8px 12px;
   font-size: 18px;
   outline: 0;
-  border: 0;
   border-radius: 5px;
   border: 2px solid #000;
   background: transparent;
@@ -233,20 +247,21 @@ body {
   margin: 20px 0;
   font-size: 20px;
 }
+
 .friend-list li {
   color: #000;
-  padding: 14px 20px;
   list-style: none;
-  border-top: 0;
-  font-size: 18px;
+	padding: 0 10px;
   transition: all 0.3s ease;
-  cursor: pointer;
   position: relative;
-  border-bottom: 2px solid #000;
+	margin-top: 20px;
+}
+
+.friend-list li:last-child {
+	margin-bottom: 20px;
 }
 
 .friend-list .link {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -286,17 +301,25 @@ body {
   display: none;
 }
 
-.offline {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.dot-container {
+	display: flex;
+	align-items: center;
+  width: 75px;
   position: absolute;
   right: 10px;
   top: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	justify-content: flex-end;
 }
 
-.online {
-  background: limegreen;
+.dot {
+	margin-right: 5px;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .icon-span i {
@@ -323,7 +346,7 @@ body {
   justify-content: space-around;
 }
 
-.options * {
+.options p {
   margin: 10px 0;
 }
 
@@ -336,23 +359,45 @@ body {
 }
 
 .last div {
+	margin: 15px 0;
   display: flex;
+	flex-direction: column;
 }
 
-.last div * {
-  background: transparent;
-  border: 1px solid #000;
-  outline: 0;
+.last input, .last .btn-grp {
   color: #000;
-  padding: 7px 10px;
+	display: block;
+	width: 100%;
+	height: 35px;
 }
 
-.last div input {
-  flex-grow: 2;
+.last input {
+  border: 2px solid #000;
+  width: 100%;
+	font-size: 16px;
+	background: #222;
+	color: #fff;
+	padding: 10px;
+	border-radius: 7px;
 }
 
-.last div button {
-  flex-grow: 1;
+.last input:focus {
+	background: linear-gradient(#111, #333);
+}
+
+.last .btn-grp {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.last button {
+  border: 2px solid #000;
+	background: transparent;
+	width: 45%;
+	font-size: 16px;
+	height: 100%;
+	border-radius: 7px;
 }
 
 .last div button:hover {

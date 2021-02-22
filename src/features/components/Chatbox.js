@@ -15,15 +15,16 @@ export const Chatbox = ({match, ownBox}) => {
   const userId = match.params.userId;
   const user = useSelector(state => state.users)
     .find(user => user.userId.toString() === userId);
+	console.log(user.userImage);
   return (
     <div className='chatbox' style={ isOpActive || ownBox ? {display: 'flex'} : {display: 'none'}}>
-      {ownBox && <Header userName={user.fullName} ownBox={ownBox} />}
+      {ownBox && user && <Header userName={user.userFullName} ownBox={ownBox} userImage={user.userImage} /> }
       <Route exact path={`${match.path}`} render={({match}) =>
         <FriendList userId={userId} match={match}/>
       } />
       <Route exact path={`${match.path}/messages/:friendId`} render={({match}) => (
         <React.Fragment>
-          <ChatHead match={match} url={url} ownBox={ownBox} userName={user.fullName} />
+          <ChatHead match={match} url={url} ownBox={ownBox} userName={user.userFullName} />
           <MessageBox match={match} ownBox={ownBox} />
           <InputMessage
             match={match}

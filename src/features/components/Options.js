@@ -45,15 +45,17 @@ export const Options = ({match}) => {
         </div>
       </div>
       <div className='last'>
-        <p>Set Nick Name</p>
+        <p style={{borderTop: '1px solid #000', borderBottom: '1px solid #000', padding: '10px 0'}}>Set Nick Name</p>
         <div>
           <input
             type='text'
             value={nName}
             onChange={e => setNName(e.target.value)}
           />
-          <button onClick={setOnClick}>Set</button>
-          <button onClick={removeOnClick}>Clear</button>
+          <div className='btn-grp'>
+						<button style={{background: '#8C9EFF'}} onClick={setOnClick}>Set</button>
+						<button style={{background: '#FF9E80'}} onClick={removeOnClick}>Clear</button>
+      		</div>
         </div>
       </div>
     </div>

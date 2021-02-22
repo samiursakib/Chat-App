@@ -3,35 +3,37 @@ import { nanoid } from 'nanoid';
 
 const initialState = [
   {
-    userId: 1324140,
+    userId: 'fqfynmjPwSrhet3lwuh43',
     friends: [
       {
-        friendId: 1324141,
-        friendName: 'Samiul Kafi Alfi',
-        isOnline: true,
+        friendId: 1000001,
+        friendFullName: 'Andreas Peitschmann',
         gender: 'male',
+				image: `${require('../images/AndreasPeitschmann.jpg')}`,
+        isOnline: true,
         nickName: null,
-        age: 12,
+        age: 22,
         conversation: [
           {
             messageId: nanoid(),
-            message: `Shut the fuck off!`,
+            message: `Are you there!`,
             time: new Date(),
             fromMe: false
           }
         ]
       },
       {
-        friendId: 2324140,
-        friendName: 'Nusrat Haque Maisha',
-        isOnline: false,
+        friendId: 1000002,
+        friendFullName: 'Maja Schone',
         gender: 'female',
+				image: `${require('../images/MajaSchone.jpg')}`,
+        isOnline: false,
         nickName: null,
         age: 20,
         conversation: [
           {
             messageId: nanoid(),
-            message: `Hey how you 're doing?`,
+            message: `Hey how you're doing?`,
             time: new Date(),
             fromMe: false
           },
@@ -50,22 +52,23 @@ const initialState = [
         ]
       },
       {
-        friendId: 1324143,
-        friendName: 'Monjurul Islam Shakil',
+        friendId: 1000003,
+        friendFullName: 'Jordis Triebel',
+        gender: 'female',
+				image: `${require('../images/JordisTriebel.jpg')}`,
         isOnline: true,
-        gender: 'male',
         nickName: null,
         age: 22,
         conversation: [
           {
             messageId: nanoid(),
-            message: `Did you do it sakib?`,
+            message: `Did you do it Sam?`,
             time: new Date(),
             fromMe: false
           },
           {
             messageId: nanoid(),
-            message: `Obviously, that's done two days ago!`,
+            message: `Obviously, that's finished two days ago!`,
             time: new Date(),
             fromMe: true
           },
@@ -84,10 +87,11 @@ const initialState = [
         ]
       },
       {
-        friendId: 1324144,
-        friendName: 'Saima Sultana Shammi',
-        isOnline: true,
+        friendId: 1000004,
+        friendFullName: 'Julika Jenkins',
         gender: 'female',
+				image: `${require('../images/JulikaJenkins.jpg')}`,
+        isOnline: true,
         nickName: null,
         age: 25,
         conversation: [
@@ -99,7 +103,7 @@ const initialState = [
           },
           {
             messageId: nanoid(),
-            message: `I see, I'll inform you Apu.`,
+            message: `I see, I'll inform you.`,
             time: new Date(),
             fromMe: true
           },
@@ -111,17 +115,18 @@ const initialState = [
           },
           {
             messageId: nanoid(),
-            message: `Sure apu. Don't panic plz.`,
+            message: `Sure. Don't feel panic plz.`,
             time: new Date(),
             fromMe: true
           }
         ]
       },
       {
-        friendId: 1324145,
-        friendName: 'Nur E Sayeed Seemanto',
+        friendId: 1000005,
+        friendFullName: 'Karoline Eichhorn',
+        gender: 'female',
+				image: `${require('../images/KarolineEichhorn.jpg')}`,
         isOnline: true,
-        gender: 'male',
         nickName: null,
         age: 26,
         conversation: [
@@ -133,39 +138,28 @@ const initialState = [
           },
           {
             messageId: nanoid(),
-            message: `Sure vaia.`,
+            message: `okay honey.`,
             time: new Date(),
             fromMe: true
           }
         ]
       },
       {
-        friendId: 1324146,
-        friendName: 'Nur E Azad Diganto',
+        friendId: 1000006,
+        friendFullName: 'Lisa Vicari',
+        gender: 'female',
+				image: `${require('../images/LisaVicari.jpg')}`,
         isOnline: false,
-        gender: 'male',
         nickName: null,
         age: 19,
-        conversation: [
-          {
-            messageId: nanoid(),
-            message: `Broh what's up?`,
-            time: new Date(),
-            fromMe: false
-          },
-          {
-            messageId: nanoid(),
-            message: `As usual bro!`,
-            time: new Date(),
-            fromMe: true
-          }
-        ]
+        conversation: []
       },
       {
-        friendId: 1324147,
-        friendName: 'Samiat Sorgo',
+        friendId: 1000007,
+        friendFullName: 'Nele Trebs',
+        gender: 'female',
+				image: `${require('../images/NeleTrebs.jpg')}`,
         isOnline: true,
-        gender: 'male',
         nickName: null,
         age: 22,
         conversation: [
@@ -182,108 +176,70 @@ const initialState = [
             fromMe: true
           }
         ]
-      }
-    ]
-  },
-  {
-    userId: 2324140,
-    friends: [
-      {
-        friendId: 2324141,
-        friendName: 'Nadia Tabassum',
-        isOnline: false,
-        gender: 'female',
-        nickName: null,
-        age: 20,
-        conversation: [
-          {
-            messageId: nanoid(),
-            message: `What's up sis?`,
-            time: new Date(),
-            fromMe: false
-          },
-          {
-            messageId: nanoid(),
-            message: `As usual my friend!`,
-            time: new Date(),
-            fromMe: true
-          }
-        ]
       },
-      {
-        friendId: 2324142,
-        friendName: 'Fahmida Momo',
-        isOnline: true,
-        gender: 'female',
-        nickName: null,
-        age: 19,
-        conversation: [
-          {
-            messageId: nanoid(),
-            message: `Where are you?`,
-            time: new Date(),
-            fromMe: false
-          },
-          {
-            messageId: nanoid(),
-            message: `I'm in the college.`,
-            time: new Date(),
-            fromMe: true
-          }
-        ]
-      }      
-    ]
-  },
-  {
-    userId: 3324140,
-    friends: [
-      {
-        friendId: 3324141,
-        friendName: 'Khalid Ibn Walid',
-        isOnline: true,
-        gender: 'male',
-        nickName: null,
-        age: 32,
-        conversation: [
-          {
-            messageId: nanoid(),
-            message: `Broh what's up?`,
-            time: new Date(),
-            fromMe: false
-          },
-          {
-            messageId: nanoid(),
-            message: `As usual bro!`,
-            time: new Date(),
-            fromMe: true
-          }
-        ]
-      },
-      {
-        friendId: 1324147,
-        friendName: 'Samiat Sorgo',
-        isOnline: true,
-        gender: 'male',
-        nickName: null,
-        age: 20,
-        conversation: [
-          {
-            messageId: nanoid(),
-            message: `You made my work done?`,
-            time: new Date(),
-            fromMe: false
-          },
-          {
-            messageId: nanoid(),
-            message: `Slight is pending yet. Have patience.`,
-            time: new Date(),
-            fromMe: true
-          }
-        ]
-      }
+			{
+				friendId: 1000008,
+				friendFullName: 'Christian Parzold',
+				gender: 'male',
+				image: `${require('../images/ChristianParzold.jpg')}`,
+				isOnline: false,
+				nickName: null,
+				age: 62,
+				conversation: [
+					{
+						messageId: nanoid(),
+						message: `Hey kid, where you heading?`,
+						time: new Date(),
+						fromMe: false
+					},
+					{
+						messageId: nanoid(),
+						message: `to New York grandpa`,
+						time: new Date(),
+						fromMe: true
+					}
+				]
+			},
+			{
+				friendId: 1000009,
+				friendFullName: 'Oliver Masucci',
+				gender: 'male',
+				image: `${require('../images/OliverMasucci.jpg')}`,
+				isOnline: true,
+				nickName: null,
+				age: 31,
+				conversation: [
+					{
+						messageId: nanoid(),
+						message: `dad bring me chips please`,
+						time: new Date(),
+						fromMe: true
+					},
+					{
+						messageId: nanoid(),
+						message: `Sure baby, I'll bring for you.`,
+						time: new Date(),
+						fromMe: false
+					}
+				]
+			},
+			{
+				friendId: 1000010,
+				friendFullName: 'Stephan Kampwirth',
+				gender: 'male',
+				image: `${require('../images/StephanKampwirth.jpg')}`,
+				isOnline: true,
+				nickName: null,
+				age: 19,
+				conversation: []
+			}
     ]
   }
 ];
+
+
+
+
 
 const conversationsSlice = createSlice({
   name: 'conversations',
@@ -311,9 +267,13 @@ const conversationsSlice = createSlice({
       const friend = state.find(user => user.userId.toString() === userId).friends
         .find(friend => friend.friendId.toString() === friendId);
       friend.nickName = null;
-    }
+    },
+		setProfile: (state, action) => {
+			const { userId } = action.payload;
+			state.push({userId, friends: []});
+		}
   }
 });
 
-export const { sendMessage, setNickName, removeNickName } = conversationsSlice.actions;
+export const { sendMessage, setNickName, removeNickName, setProfile } = conversationsSlice.actions;
 export default conversationsSlice.reducer;
