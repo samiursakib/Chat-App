@@ -6,8 +6,8 @@ Features:
  - Updated state using Redux state management
  - Signup process for new users
  
-Use the following login info & check this beautiful app interface.
-User Name: louisHofmann
-Password: louis@Hofmann
+Use the following login info & check this beautiful app interface:
+ - User Name: louisHofmann
+ - Password: louis@Hofmann
 
 Thank you for having patience. Happy coding. :)
