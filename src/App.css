@@ -22,13 +22,13 @@ body {
 
 .chatbox {
 	display: flex;
-  width: 400px;
+  width: 350px;
   height: 600px;
   flex-direction: column;
-  background: linear-gradient(90deg, #7e99c7, #537895);
-  border: 2px solid #000;
-  border-radius: 28px;
+  background: #050505;
+  border-radius: 10px;
   overflow: hidden;
+  border: 1px solid #050505;
 }
 
 .input-message form {
@@ -37,34 +37,31 @@ body {
 
 .input-message input {
   color: #fff;
-  background: #222;
+  background: #050505;
   outline: 0;
-  border: 2px solid #000;
+  border: 1px solid #111;
   padding: 10px 15px;
-  font-size: 18px;
-  border-radius: 50%;
+  font-size: smaller;
   flex-grow: 1;
-  border-radius: 50px;
+  border-right: 0;
 }
 
 .input-message input:focus {
-  background: linear-gradient(#111, #333);
+  background: #111;
 }
 
 .input-message button {
-  font-weight: bolder;
   cursor: pointer;
-  background: #111;
   color: #fff;
   border: 0;
   outline: 0;
   padding: 12px 14px;
-  border-radius: 50%;
-  border: 2px solid #000;
+  border: 1px solid #111;
+  background: #050505;
 }
 
 .input-message button:hover {
-  background: #222;
+  background: #111;
 }
 
 .header {
@@ -73,7 +70,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px 10px 10px 20px;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #333;
   background: rgba(0, 0, 0, 0.4);
 	align-content: center;
 	align-items: center;
@@ -90,23 +87,21 @@ body {
   font-weight: lighter;
   font-size: 25px;
   align-self: center;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
 .header button {
-  border-radius: 10px;
+  border-radius: 5px;
   color: #fff;
-  background: #111;
-  padding: 4px 8px;
-  font-size: 16px;
-  border: 1px solid #000;
+  background: #222;
+  padding: 5px;
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 	margin-right: 8px;
 }
 
 .header button:hover {
-  background: #222;
+  background: #333;
 }
 
 .message-box {
@@ -123,23 +118,25 @@ body {
   max-width: 250px;
   display: flex;
   align-self: flex-end;
-  color: #000;
-	font-weight: 600;
+  color: #fff;
+	font-weight: 100;
   padding: 10px;
   background: transparent;
-  border-radius: 10px;
-  border: 2px solid #111;
+  border-radius: 7px;
+  border: 1px solid #111;
   margin: 10px 0;
   transition: all 0.3s ease;
   margin-right: 10px;
+  font-size: smaller;
 }
 
 .received-message {
+  font-size: smaller;
   max-width: 250px;
-	font-weight: 600;
+	font-weight: 100;
   display: flex;
   align-self: flex-start;
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 10px;
   background: #111;
   margin: 10px 0;
@@ -148,54 +145,53 @@ body {
   margin-left: 10px;
 }
 
-.login-signup {
-	
-  width: 300px;
-  padding: 20px;
-  border: 2px solid #111;
-  border-radius: 15px;
-  background: linear-gradient(90deg, #7e99c7, #537895);
-  box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 0.5);
-	color: #000;
-}
-
-.login-signup h1 {
-  font-weight: 100;
-  margin-top: -5px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #000;
-}
-
 .center {
   text-align: center;
 }
 
 .note {
-	font-size: 15px;
+  font-size: smaller;
   margin-top: 10px;
   padding: 5px 0;
 	color: #b62525;
 	font-weight: bold;
-	text-decoration: underline #b62525;
+	text-decoration: none;
+}
+
+.login-signup {
+  width: 300px;
+  padding: 20px;
+  border-radius: 7px;
+  background: #050505;
+  box-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.login-signup h3 {
+  font-weight: 100;
+  margin-top: -5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
 }
 
 .login-signup label {
   margin: 20px 0 0 0;
+  font-size: smaller;
+  padding-bottom: 12px;
 }
 
 .login-signup input {
-  margin: 7px 0 0 0;
   outline: 0;
-  padding: 5px 10px;
-  font-size: 18px;
+  padding: 8px 12px;
+  font-size: smaller;
   border-radius: 5px;
-  border: 2px solid #111;
-  background: #222;
+  border: 0;
+  background: #181818;
   color: #ddd;
 }
 
 .login-signup input:focus {
-  background: linear-gradient(#111, #333);
+  background: linear-gradient(#2c2c2c, #222);
 }
 
 .but-holder {
@@ -205,20 +201,21 @@ body {
 
 .but-holder button {
   margin: 10px 0 0 0;
-  padding: 8px 12px;
-  font-size: 18px;
+  padding: 10px 15px;
+  font-size: smaller;
   outline: 0;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 1px solid #fff;
   background: transparent;
   transition: all 0.3s ease;
   margin: 20px 0;
-  color: #000;
+  color: #fff;
   cursor: pointer;
 }
 
 .but-holder button:hover, .but-holder button:focus {
-  background: rgba(0, 0, 0, 0.3);
+  color: #000;
+  background: #fff;
 }
 
 .login-signup form {
@@ -228,8 +225,9 @@ body {
 
 .login-signup .link {
   cursor: pointer;
-	color: #000;
+	color: #fff;
   text-decoration: none;
+  font-size: smaller;
 }
 
 .login-signup .link:hover {
@@ -249,7 +247,7 @@ body {
 }
 
 .friend-list li {
-  color: #000;
+  color: #fff;
   list-style: none;
 	padding: 0 10px;
   transition: all 0.3s ease;
@@ -258,7 +256,7 @@ body {
 }
 
 .friend-list li:last-child {
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .friend-list .link {
@@ -268,16 +266,15 @@ body {
 .chat-head {
   display: flex;
   flex-wrap: nowrap;
-  color: #000;
-  background: rgba(255, 255, 255, 0.3);
+  background: #eee;
 }
 
 .chat-head > div {
-  padding: 9px 0;
+  padding: 10px 0;
 }
 
 .chat-head .icon-span {
-  padding: 12px 15px;
+  padding: 10px;
 }
 
 .chat-head .link {
@@ -287,14 +284,15 @@ body {
 }
 
 .chat-head .name {
-  font-size: 20px;
+  font-size: medium;
   flex-grow: 1;
   text-align: center;
   align-self: center;
+  color: #555;
 }
 
 .chat-head .icon-span:not(.blank-span):hover {
-  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -316,10 +314,10 @@ body {
 .dot {
 	margin-right: 5px;
 	border-radius: 50%;
-	width: 10px;
-	height: 10px;
+	width: 5px;
+	height: 5px;
 	display: inline-block;
-	background: rgba(0, 0, 0, 0.7);
+	background: #bbb;
 }
 
 .icon-span i {
@@ -335,7 +333,8 @@ body {
 }
 
 .options {  
-  color: #000;
+  color: #fff;
+  font-size: 14px;
 }
 
 .options .first {
@@ -355,7 +354,7 @@ body {
 }
 
 .options .last {
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 .last div {
@@ -372,17 +371,19 @@ body {
 }
 
 .last input {
-  border: 2px solid #000;
+  border: 0;
   width: 100%;
-	font-size: 16px;
-	background: #222;
+	font-size: smaller;
+	background: #050505;
 	color: #fff;
 	padding: 10px;
-	border-radius: 7px;
+	border-radius: 5px;
+  border: 1px solid #111;
 }
 
 .last input:focus {
-	background: linear-gradient(#111, #333);
+	background: #111;
+  outline: none;
 }
 
 .last .btn-grp {
@@ -392,7 +393,7 @@ body {
 }
 
 .last button {
-  border: 2px solid #000;
+  border: 1px solid #000;
 	background: transparent;
 	width: 45%;
 	font-size: 16px;
@@ -403,5 +404,4 @@ body {
 .last div button:hover {
   background: rgba(0, 0, 0, 0.2);
 }
-
 

@@ -19,19 +19,19 @@ export const FriendList = ({match}) => {
               	<div style={{display: 'flex', alignItems: 'center'}}>
 									<div style={{
 										...thumbnailStyle,
-										width: '40px',
-										height: '40px',
+										width: '30px',
+										height: '30px',
 										backgroundImage: `url(${friend.image})`
 									}}></div>
-									<div>
-										<div style={{fontSize: '16px'}}>{friend.nickName ? friend.nickName : friend.friendFullName}</div>
-										{findLastMessage(friend) ? <div style={{fontWeight: 'bold', fontSize: '12px', width: '150px', whiteSpace:'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', textWrap: 'no-wrap'}}>{findLastMessage(friend)}</div> : null}
+									<div style={{marginLeft: '8px'}}>
+										<div style={{fontSize: '12px', marginBottom: '4px', color: '#eee'}}>{friend.nickName ? friend.nickName : friend.friendFullName}</div>
+										{findLastMessage(friend) ? <div style={{fontWeight: 'bold', fontSize: '11px', width: '180px', whiteSpace:'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', textWrap: 'no-wrap', color: '#bbb'}}>{findLastMessage(friend)}</div> : null}
 									</div>
+									{friend.isOnline ? <div className='dot-container' style={{alignSelf: 'center'}}><span className='dot'></span>Active</div> : null}
             		</div>
-                {friend.isOnline ? <div className='dot-container'><span className='dot'></span>Active</div> : null}
               </li>
             </Link>)
-        : <p style={{textAlign: 'center', marginTop: '250px', color: '#000', fontSize: '18px'}}>Make some friends first!<br/>Add people.</p>
+        : <p style={{textAlign: 'center', marginTop: '250px', color: '#eee', fontSize: '18px'}}>Make some friends first!<br/>Add people.</p>
       }
     </div>
   );

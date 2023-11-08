@@ -31,12 +31,6 @@ export const Options = ({match}) => {
           <p>Gender</p>
           <p>Age</p>
         </div>
-        <div className='bold'>
-          <p>:</p>
-          <p>:</p>
-          <p>:</p>
-          <p>:</p>
-        </div>
         <div>
           <p>{!friend.nickName ? 'Notset' : friend.nickName}</p>
           <p>{friend.isOnline ? 'Online' : 'Offline'}</p>
@@ -45,7 +39,7 @@ export const Options = ({match}) => {
         </div>
       </div>
       <div className='last'>
-        <p style={{borderTop: '1px solid #000', borderBottom: '1px solid #000', padding: '10px 0'}}>Set Nick Name</p>
+        <p style={{borderTop: '1px solid #000', borderBottom: '1px solid #000', padding: '20px 0 0px 0'}}>Set Nick Name</p>
         <div>
           <input
             type='text'
@@ -53,8 +47,8 @@ export const Options = ({match}) => {
             onChange={e => setNName(e.target.value)}
           />
           <div className='btn-grp'>
-						<button style={{background: '#8C9EFF'}} onClick={setOnClick}>Set</button>
-						<button style={{background: '#FF9E80'}} onClick={removeOnClick}>Clear</button>
+						<button style={{color: '#eee', background: '#3011e6', border: 0, borderRadius: 3, cursor: 'pointer'}} onClick={setOnClick}>Set</button>
+						<button style={{color: '#eee', background: '#b62525', border: 0, borderRadius: 3, cursor: 'pointer'}} onClick={removeOnClick}>Clear</button>
       		</div>
         </div>
       </div>

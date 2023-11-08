@@ -38,20 +38,20 @@ export const SignUp = () => {
 		<div className='container'>
 			<div className='login-signup'>
 				<form onSubmit={onSubmit}>
-					<h1 className='center'>Signup Form</h1>
-					<label>Username:</label>
+					<h3 className='center'>Signup</h3>
+					<label>Username</label>
 					<input
 						type='text'
 						value={userName}
 						onChange={e => setUserName(e.target.value)}
 					/>
-					<label>Fullname:</label>
+					<label>Fullname</label>
 					<input
 						type='text'
 						value={userFullName}
 						onChange={e => setUserFullName(e.target.value)}
 					/>
-					<label>Password:</label>        
+					<label>Password</label>        
 					<input
 						type='password'
 						value={password}

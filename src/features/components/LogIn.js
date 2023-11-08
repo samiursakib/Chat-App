@@ -28,14 +28,14 @@ export const LogIn = () => {
 		<div className='container'>
 			<div className='login-signup'>
 				<form onSubmit={onSubmit}>
-					<h1 className='center'>Login Form</h1>
-					<label>Username:</label>
+					<h3 className='center'>Login</h3>
+					<label>Username</label>
 					<input
 						type='text'
 						value={userName}
 						onChange={e => setUserName(e.target.value)}
 					/>
-					<label>Password:</label>        
+					<label>Password</label>        
 					<input
 						type='password'
 						value={password}

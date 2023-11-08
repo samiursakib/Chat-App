@@ -7,17 +7,17 @@ export const Header = ({userName, userImage}) => {
     	<div style={{display: 'flex'}}>
     		<div style={{
 					...thumbnailStyle,
-					width: '50px',
-					height: '50px',
+					width: '40px',
+					height: '40px',
 					backgroundImage: `url(${userImage})`
 				}}>
     		</div>
-     		<h1>{userName}</h1>
+     		<h1 style={{fontSize: '16px', paddingLeft: '5px'}}>{userName}</h1>
      	</div>
       <Link to='/'>
         <button>
           <span className='icon-span'>
-            <i className="fas fa-sign-out-alt"></i>
+            <i className="fas fa-sign-out-alt" style={{ fontSize: '16px' }}></i>
           </span>
         </button>
       </Link>
